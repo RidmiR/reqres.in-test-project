@@ -52,8 +52,8 @@ describe('01.03 - Get Resource details', () => {
 
       cy.getResourceDetails(baseUrl, resourceContext, "/23", false).then(response => {
         expect(response.status).to.eq(404);
-      });
 
+      });
     })
   })
 })

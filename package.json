@@ -4,7 +4,7 @@
   "description": "Sample test project which conatins API automation test cases",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^9.6.0"
+    "cypress": "^8.5.0"
   },
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.0.1",

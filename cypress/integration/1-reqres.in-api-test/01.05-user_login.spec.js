@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('01.05 - User logins', () => {
 
     const baseUrl = Cypress.env("baseUrl"),
@@ -31,11 +29,27 @@ describe('01.05 - User logins', () => {
             });
         })
 
-        it('Login delay', () => {
+        it('01.05.03 - Login delay response', () => {
 
-            cy.userDetailsDelayResponse(baseUrl, resourceContext, "?delay=3", 3000 , false).then(response => {
-                expect(response.status).to.eq(200);
-            });
+            cy.intercept(
+                {
+                    method: 'GET',
+                    url: 'https://reqres.in/api/users?delay=3',
+                },
+                {
+                    statusCode: 200,
+                    delay: 3000,
+                },
+            ).as("delayResponse");
+
+            cy.request({
+
+                method: "GET",
+                url: "https://reqres.in/api/users"
+            })
+            .wait(["@delayResponse"], { timeout: 15000 }).then(rep => {
+                cy.log(JSON.stringify(rep.body.data))
+            })
         })
     })
 })

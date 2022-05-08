@@ -61,6 +61,5 @@ describe('01.01 - Check User details APIs', () => {
 
       });
     })
-
   })
 });

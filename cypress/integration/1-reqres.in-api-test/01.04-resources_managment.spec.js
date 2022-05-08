@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('01.04 - Check Resource managment APIs', () => {
 
     const baseUrl = Cypress.env("baseUrl"),
@@ -19,6 +17,7 @@ describe('01.04 - Check Resource managment APIs', () => {
 
             cy.createReource(baseUrl, resourceContext, successfulResourceData, true).then(response => {
                 expect(response.status).to.eq(200);
+                
             });
         })
 
@@ -28,8 +27,8 @@ describe('01.04 - Check Resource managment APIs', () => {
                 expect(response.status).to.eq(400);
 
                 expect(JSON.stringify(response.body)).to.eq("{" + '"error"' + ":" + '"Missing password"'+"}");
+
             });
         })
-
     })
 })

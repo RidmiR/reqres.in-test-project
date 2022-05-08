@@ -1,6 +1,6 @@
 # Reqres.in API test project
 
-This repository creates to add the APIs test cases for all the CRUD operation which addes in https://reqres.in/ 
+This repository creates to add the API test cases for all the CRUD operation which is in https://reqres.in/ 
 This test project implemented with [cypress.io](https://www.cypress.io) test automation framework. 
  
 ## Pre Requisites
@@ -10,7 +10,7 @@ This test project implemented with [cypress.io](https://www.cypress.io) test aut
 
 ## Setup build environment
 
-Get the sample repo from below link listed
+1. Get the sample repo from below link listed
 
     git clone https://github.com/RidmiR/reqres.in-test-project.git
 
@@ -41,7 +41,7 @@ Get the sample repo from below link listed
    * npm install mochawesome --save-dev
    >mochawesome generates a beautiful report in HTML format.
 
-   ## Folder structure
+## Folder structure
 
 1. **Integration** folder provides a place that writes out test cases. We can also create our folder under the integration directory and add out test cases under that.
 
