@@ -51,7 +51,7 @@ Cypress.Commands.add("getSingleUserData", (baseUrl, resource, params, failOnStat
  */
 Cypress.Commands.add("getResourceDetails", (baseUrl, resource, params, failOnStatusCode) => {
 
-    cy.log("The end point : " + baseUrl + resource + " is calling.");
+    cy.log("The end point : " + baseUrl + resource + params + " is calling.");
 
     return cy.request({
 
@@ -95,6 +95,8 @@ Cypress.Commands.add("getSingleResourceDetails", (baseUrl, resource, params, fai
  */
 Cypress.Commands.add("createUser", (baseUrl, resource, reqBody, failOnStatusCode) => {
 
+    cy.log("The end point : " + baseUrl + resource + " is calling.");
+
         return cy.request({
             "method": "POST",
             "url": baseUrl + resource,
@@ -114,6 +116,8 @@ Cypress.Commands.add("createUser", (baseUrl, resource, reqBody, failOnStatusCode
  * @param  {boolean} failOnStatusCode -  Whether to fail on response codes other than 2xx and 3xx
  */
 Cypress.Commands.add("updateUser", (baseUrl, resource, reqBody, failOnStatusCode) => {
+
+    cy.log("The end point : " + baseUrl + resource + " is calling.");
 
     return cy.request({
         "method": "PUT",
@@ -135,6 +139,8 @@ Cypress.Commands.add("updateUser", (baseUrl, resource, reqBody, failOnStatusCode
  */
 Cypress.Commands.add("deleteUser", (baseUrl, resource, params, failOnStatusCode) => {
 
+    cy.log("The end point : " + baseUrl + resource + params + " is calling.");
+
         return cy.request({
 
             "method": "DELETE",
@@ -152,6 +158,8 @@ Cypress.Commands.add("deleteUser", (baseUrl, resource, params, failOnStatusCode)
  * @param  {boolean} failOnStatusCode -  Whether to fail on response codes other than 2xx and 3xx
  */
 Cypress.Commands.add("createReource", (baseUrl, resource, reqBody, failOnStatusCode) => {
+
+    cy.log("The end point : " + baseUrl + resource + " is calling.");
 
     return cy.request({
         "method": "POST",
@@ -173,6 +181,8 @@ Cypress.Commands.add("createReource", (baseUrl, resource, reqBody, failOnStatusC
  * @param  {boolean} failOnStatusCode -  Whether to fail on response codes other than 2xx and 3xx
  */
 Cypress.Commands.add("userLogin", (baseUrl, resource, reqBody, failOnStatusCode) => {
+
+    cy.log("The end point : " + baseUrl + resource + " is calling.");
 
     return cy.request({
         "method": "POST",
