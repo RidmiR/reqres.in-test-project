@@ -14,6 +14,6 @@
     },
     "viewportWidth": 1280,
     "viewportHeight": 1000,
-    "requestTimeout": 60000,
-    "responseTimeout": 60000
+    "requestTimeout": 6000,
+    "responseTimeout": 6000
 }

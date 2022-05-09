@@ -41,15 +41,6 @@ describe('01.05 - User logins', () => {
                     delay: 3000,
                 },
             ).as("delayResponse");
-
-            cy.request({
-
-                method: "GET",
-                url: "https://reqres.in/api/users"
-            })
-            .wait(["@delayResponse"], { timeout: 15000 }).then(rep => {
-                cy.log(JSON.stringify(rep.body.data))
-            })
         })
     })
 })
